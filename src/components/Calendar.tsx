@@ -30,6 +30,7 @@ export const Calendar = () => {
                 {
                     days.map((day) => (
                         <div key={day} className={`day day-${day} ${day == 20 ? ' date' : ''}`}>
+                            {day == 20 && <div className='heartbeat'></div>}
                             <span>
                                 {day}
                             </span>
