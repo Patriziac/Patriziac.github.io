@@ -26,8 +26,14 @@ body {
 
 body,
 main {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .App {
@@ -35,8 +41,8 @@ main {
     align-content: center;
     align-items: center;
     justify-content: center;
-    height: 100%;
     flex-direction: column;
+    padding: 5rem 0;
 }
 
 body .title {
@@ -63,7 +69,7 @@ body .title {
     }
 
     body {
-        background-position: bottom 0px right -220px;
-        background-size: 510%;
+        background-position: bottom 0px right -200px;
+        background-size: 430%;
     }
 }
