@@ -46,3 +46,24 @@ body .title {
     text-align: center;
     margin: 1rem 0;
 }
+
+
+@media (max-width: 520px) {
+    :root {
+        font-size: 14px;
+    }
+
+    main {
+        margin: 0 auto;
+        max-width: 70%;
+    }
+
+    body .title {
+        font-size: 3.75rem;
+    }
+
+    body {
+        background-position: bottom 0px right -220px;
+        background-size: 510%;
+    }
+}
