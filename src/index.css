@@ -2,74 +2,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap');
 
 :root {
-    font-family: 'Lora', serif;
-    font-size: 16px;
-    font-weight: 500;
-    color-scheme: light dark;
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  font-weight: 500;
+  color-scheme: light dark;
 
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
-    --primary-color: #f8b96c9c;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --primary-color: #f8b96c9c;
+  --background-color: #f7f9f4;
+  --text-color: #665851;
 }
 
 body {
-    background-image: url('./assets/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 0;
-    padding: 0;
+  background-color: var(--background-color);
+  /* background-image: url('./assets/back-1.png'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  padding: 0;
 }
 
 body,
 main {
-    min-height: 100vh;
-    width: 100%;
+  min-height: 100vh;
+  width: 100%;
 }
 
 main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .App {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 5rem 0;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-body .title {
-    font-family: 'Great Vibes', cursive;
-    font-size: 5rem;
-    margin: 0;
-    text-align: center;
-    margin: 1rem 0;
+.title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 5rem;
+  margin: 0;
+  text-align: center;
+  margin: 1rem 0;
+  color: var(--text-color);
 }
 
+.title span {
+  white-space: nowrap;
+}
 
-@media (max-width: 520px) {
-    :root {
-        font-size: 14px;
-    }
+p {
+  text-align: center;
+  color: var(--text-color);
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 1px;
+}
 
-    main {
-        margin: 0 auto;
-        max-width: 70%;
-    }
+@media (max-width: 900px) and (orientation: portrait) {
+  :root {
+    font-size: 12px;
+  }
 
-    body .title {
-        font-size: 3.75rem;
-    }
+  .title {
+    font-size: 3.5rem;
+  }
+}
 
-    body {
-        background-position: bottom 0px right -200px;
-        background-size: 460%;
-    }
+@media (max-width: 900px) and (orientation: landscape) {
+  :root {
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 3.25rem;
+  }
+
+  .diamond-center {
+    max-height: 100vh;
+  }
 }

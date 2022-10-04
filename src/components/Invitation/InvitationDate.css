@@ -1,0 +1,22 @@
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.date span {
+  padding: 0 5px;
+  font-size: 0.9em;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+.date .day {
+  border-left: 1px solid var(--text-color);
+  border-right: 1px solid var(--text-color);
+}
+
+.date .day .number {
+  font-size: 2em;
+  font-weight: bolder;
+}

@@ -1,0 +1,8 @@
+.invitation-content {
+  z-index: 999;
+  max-width: 18rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: center;
+}
