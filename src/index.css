@@ -148,10 +148,15 @@ p {
   }
 }
 
-
-@media (max-width: 900px) and (orientation: portrait) {
+/* Phone portrait */
+@media (max-width: 819px) and (orientation: portrait) {
   :root {
     font-size: 14px;
+  }
+
+  .leaves {
+    width: 15rem;
+    height: 15rem;
   }
 
   h1.title {
@@ -167,9 +172,15 @@ p {
   }
 }
 
-@media (max-width: 900px) and (orientation: landscape) {
+/* Phone landscape */
+@media (max-width: 819px) and (orientation: landscape) {
   :root {
-    font-size: 14px;
+    font-size: 12px;
+  }
+
+  .leaves {
+    width: 15rem;
+    height: 15rem;
   }
 
   h1.title {
@@ -189,9 +200,16 @@ p {
   }
 }
 
-@media (min-width: 901px) {
+/* iPads */
+@media (min-width: 820px) and (max-width: 1200px),
+(min-width:768px) and (max-width: 1200px) and (orientation: portrait) {
   :root {
-    font-size: 14px;
+    font-size: 16px;
+  }
+
+  .leaves {
+    width: 20rem;
+    height: 20rem;
   }
 
   h1.title {
@@ -208,5 +226,30 @@ p {
 
   .diamond-center {
     max-height: 100vh;
+  }
+}
+
+
+/* Desktops */
+@media (min-width: 1201px) {
+  :root {
+    font-size: 20px;
+  }
+
+  .leaves {
+    width: 23rem;
+    height: 23rem;
+  }
+
+  h1.title {
+    font-size: 4rem;
+  }
+
+  h2.title {
+    font-size: 3rem;
+  }
+
+  h3.title {
+    font-size: 2.75rem;
   }
 }
