@@ -1,6 +1,5 @@
 .invitation-content {
   z-index: 999;
-  max-width: 18rem;
   position: absolute;
   left: 0;
   right: 0;
@@ -10,4 +9,56 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.invitation-content .intro {
+  max-width: 18rem;
+}
+
+.invitation-content.info {
+  max-width: 20rem;
+}
+
+.invitation-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.invitation-section p {
+  margin-top: 0.25rem;
+}
+
+.invitation-etiquette span {
+  padding: 0 10px;
+  font-size: 0.9em;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+.invitation-etiquette span:not(:last-child) {
+  border-right: 1px solid var(--secondary-color);
+}
+
+.invitation-content.info p {
+  text-transform: initial;
+}
+
+.invitation-link:active,
+.invitation-link:visited,
+.invitation-link:hover,
+.invitation-link {
+  display: inline-block;
+  border: 1px solid var(--secondary-color);
+  border-radius: .25rem;
+  white-space: nowrap;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  padding: 0 0.25rem;
+  color: var(--text-color) !important;
+  text-decoration: none !important;
+  margin: 0.5rem auto;
+  font-size: 0.9em;
 }

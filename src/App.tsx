@@ -3,30 +3,49 @@ import './App.css'
 import { DecorationsDiamond } from './components/Decorations/DecorationsDiamond'
 import { DecorationsLeaves } from './components/Decorations/DecorationsLeaves'
 import { InvitationContent } from './components/Invitation/InvitationContent'
+import { InvitationContentInfo } from './components/Invitation/InvitationContentInfo'
 
 function App() {
 
-  const showPage1Handler = () => {
-    let page: any = document.querySelector('.page-1');
-    page.classList.add('fade-out');
-  }
+  const changePageEffect = () => {
+    const pages = ['page1', 'page2']
 
-  const showPage2Handler = () => {
-    let page: any = document.querySelector('.page-2');
-    page.classList.add('fade-in');
+    pages.forEach((item) => {
+      let page = document.getElementById(item);
+
+      if (page?.classList.contains('active')) {
+        page?.classList.add('fade-out');
+        page?.classList.remove('fade-in');
+        page?.classList.remove('active');
+      }
+      else {
+        page?.classList.remove('fade-out');
+        page?.classList.add('fade-in');
+        page?.classList.add('active');
+      }
+    });
   }
 
   useEffect(() => {
-    //const showPage1 = setTimeout(showPage1Handler, 5000);
-    ///const showPage2 = setTimeout(showPage2Handler, 15000);
+    const changePage = setInterval(changePageEffect, 10000);
+
+    return () => {
+      clearInterval(changePage);
+      console.log('Unmounted');
+    };
   }, []);
 
   return (
     <div className="App">
-      <div className='page page-1'>
-        <DecorationsLeaves />
+      <div id='page1' className='page page-1 active' >
+        <DecorationsLeaves inverted={false} />
         <DecorationsDiamond />
         <InvitationContent />
+      </div>
+
+      <div id='page2' className='page page-2'>
+        <DecorationsLeaves inverted={true} />
+        <InvitationContentInfo />
       </div>
     </div>
   )

@@ -1,11 +1,4 @@
-.leaves {
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 15rem;
-  height: 15rem;
-  position: absolute;
-}
-
+/* Leaves */
 .leaves-full {
   background-image: url(/src/assets/left.png), url(/src/assets/right.png);
   background-position: top left, bottom right;
@@ -19,22 +12,49 @@
   top: 0;
 }
 
+.leaves {
+  background-size: 90%;
+  background-repeat: no-repeat;
+  width: 15rem;
+  height: 15rem;
+  position: absolute;
+}
+
 .leaves-left {
-  background-image: url('../../assets/left.png');
-  background-size: contain;
+  background-image: url('../../assets/corner.png');
   background-position: top left;
   top: 0;
   left: 0;
 }
 
 .leaves-right {
-  background-image: url('../../assets/right.png');
+  background-image: url('../../assets/corner.png');
   background-size: 90%;
-  background-position: bottom right;
+  background-position: left top;
   bottom: 0;
   right: 0;
-
+  transform: rotate(180deg);
 }
+
+.inverted .leaves-left {
+  background-image: url('../../assets/corner.png');
+  background-position: initial;
+  bottom: 0;
+  left: 0;
+  top: initial;
+  transform: rotate(270deg);
+}
+
+.inverted .leaves-right {
+  background-image: url('../../assets/corner.png');
+  background-size: 90%;
+  background-position: left top;
+  top: 0;
+  right: 0;
+  transform: rotate(90deg);
+}
+
+/* Diamonds */
 
 .diamond-center {
   position: absolute;
@@ -43,8 +63,8 @@
   left: 0;
   right: 0;
   margin: auto;
-  width: 90vw;
-  height: 90vw;
+  width: 100vw;
+  height: 100vw;
   max-width: 35rem;
   max-height: 35rem;
 }
