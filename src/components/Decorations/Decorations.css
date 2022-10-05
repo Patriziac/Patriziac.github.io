@@ -67,6 +67,7 @@
   height: 100vw;
   max-width: 35rem;
   max-height: 35rem;
+  overflow: hidden;
 }
 
 .diamond-half-1 {
@@ -105,6 +106,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 .rotate-center {
