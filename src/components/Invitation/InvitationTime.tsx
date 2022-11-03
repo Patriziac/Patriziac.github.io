@@ -4,7 +4,7 @@ export const InvitationTime = () => {
   return (
     <p className='time'>
       <span>
-        A la <span className='hour'>12:30</span> pm
+        A las <span className='hour'>12:30</span> pm
       </span>
     </p>
   )
