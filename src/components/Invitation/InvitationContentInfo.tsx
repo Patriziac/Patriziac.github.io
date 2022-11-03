@@ -29,7 +29,7 @@ export const InvitationContentInfo = () => {
           <div className='line'></div>
         </h2>
         <p>
-          Lafayette 2710, Los Faisanes 1er Sector, 67169 Guadalupe, N.L.
+          Lafayette 2710, Los Faisanes Sector Platino, 67169 Guadalupe, N.L.
         </p>
         <a href="https://g.page/losfaisanesplatino?share" target='_blank' className='invitation-link'>
           Ver mapa
